@@ -5,8 +5,42 @@ namespace WritingFunctions
     class Program
     {
 
+        // Example 4 - Lambda Expressions / Functional Programming (imperative vs declarative)
+        // imperative version
+        static int FibImperative(int term)
+        {
+            if (term == 1)
+            {
+                return 0;
+            }
+            else if (term == 2)
+            {
+                return 1;
+            }
+            else
+            {
+                return FibImperative(term - 1) + FibImperative(term - 2);
+            }
 
-        // Example3
+        }
+
+        //Functional version
+        static int FibFunctional(int term) =>
+        term switch
+        {
+            1 => 0,
+            2 => 1,
+            _ => FibFunctional(term - 1) + FibFunctional(term - 2)
+        };
+
+
+
+        // Example 3
+        /// <summary>
+        /// Used to calculate factorial for positive integer values.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Facotiral of the entered number</returns>
         static int Factorial(int input)
         {
             if (input < 1)
@@ -108,9 +142,17 @@ namespace WritingFunctions
 
         static void Main(string[] args)
         {
+
+            for (int i = 1; i < 18; i++)
+            {
+                System.Console.WriteLine(FibFunctional(i));
+            }
+
+
             //RunTimesTable(); 
             //RunCalculateTax();
 
+            /*
             try
             {
                 System.Console.WriteLine($"17! = {Factorial(17)}");
@@ -120,6 +162,8 @@ namespace WritingFunctions
             {
                 System.Console.WriteLine($"Number too big for 32bit Integer ({exc.GetType()})");
             }
+            */
+
 
         }
     }
