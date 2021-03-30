@@ -1,0 +1,5 @@
+Trace Error
+Trace Warning
+Trace Info
+This is "Debug"
+This is "Trace"
