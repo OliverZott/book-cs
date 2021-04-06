@@ -25,10 +25,13 @@ namespace Instrumenting
             IConfigurationRoot configuration = builder.Build();
 
             // Provides a multilevel switch to control tracing and debug output
-            var ts = new TraceSwitch(displayName: "TraceLevelSwitch", description: "This switch is set via a JSON config.");
+            var ts = new TraceSwitch(displayName: "TraceLevelSwitch Displayname", description: "This switch is set via a JSON config.");
 
-            configuration.GetSection("TraceLevelSwitch").Bind(ts);
+            
+            configuration.GetSection("TraceLevelSwitch7").Bind(ts);
 
+
+            System.Console.WriteLine($"'TraceSwitch' instance called with: Name='{ts.DisplayName}', Description='{ts.Description}'");
             Trace.WriteLineIf(ts.TraceError, "Trace Error");
             Trace.WriteLineIf(ts.TraceWarning, "Trace Warning");
             Trace.WriteLineIf(ts.TraceInfo, "Trace Info");

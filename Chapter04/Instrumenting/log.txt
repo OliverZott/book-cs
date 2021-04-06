@@ -1,5 +1,6 @@
 Trace Error
 Trace Warning
 Trace Info
+Trace Verbose
 This is "Debug"
 This is "Trace"
