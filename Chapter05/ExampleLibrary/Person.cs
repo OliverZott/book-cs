@@ -8,5 +8,7 @@ namespace Example.Shared
         // fields
         public string name;
         public DateTime dateOfBirth;
+        public WondersOfTheAncientWorld favoriteWonder;
+
     }
 }
