@@ -1,6 +1,7 @@
 ﻿using System;
 using Example.Shared;
 using ExampleLibrary;
+using ExampleLibrary9;
 
 namespace PeopleApp
 {
@@ -10,7 +11,41 @@ namespace PeopleApp
         {
             Person Olli = new("Olli", new DateTime(1983, 12, 17));
 
+            // ------------------------ page 176 - Pattern Matching ------------------------ 
+            object[] passengers = {
+                new FirstClassPassenger(){ AirMiles = 1_415},
+                new FirstClassPassenger{ AirMiles = 16_562},
+                new CoachClassPassenger{ CarryOnKG = 25.3},
+                new CoachClassPassenger{ CarryOnKG = 0.3},
+                new BusinessClassPassenger(),
+            };
+
+            foreach (object passenger in passengers)
+            {
+                decimal fligthCost = passenger switch
+                {
+                    FirstClassPassenger p => p.AirMiles switch
+                    {
+                        > 35000 => 1500M,
+                        > 15000 => 1750M,
+                        _ => 2000M,
+                    },
+
+                    BusinessClassPassenger => 1000M,
+
+                    CoachClassPassenger p when p.CarryOnKG < 10.0 => 500M,
+                    CoachClassPassenger => 650M,
+                    _ => 800M,
+                };
+
+                System.Console.WriteLine($"Flight costs {fligthCost:C} for {passenger}");
+            }
+
+
+
+
             // ------------------------ page 172 - Properties and Indexers ------------------------ 
+            /*
             System.Console.WriteLine(Olli.Origin);
             System.Console.WriteLine(Olli.Age);
             try
@@ -28,6 +63,7 @@ namespace PeopleApp
             Olli.Children.Add(new Person("child2"));
             Olli.Children.Add(new Person("child3"));
             System.Console.WriteLine(Olli.Children[4]);
+            */
 
 
 
