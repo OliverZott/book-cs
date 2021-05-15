@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Example.Shared
 {
-    public class Person : object
+    public partial class Person : object
     {
         // read-only better  than const (page 156)
         public static readonly string HomePlanet = "Earth";
