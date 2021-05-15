@@ -13,12 +13,14 @@
             "request": "launch",
             "preLaunchTask": "build",
             "OS-COMMENT4": "If you have changed target frameworks, make sure to update the program path.",
-            "program": "${workspaceFolder}/Chapter02/NullHandling/bin/Debug/net5.0/NullHandling.dll",
+            //"program": "${workspaceFolder}/Chapter02/NullHandling/bin/Debug/net5.0/NullHandling.dll",
+            "program": "${workspaceFolder}/Chapter05/PeopleApp/bin/Debug/net5.0/PeopleApp.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Chapter02/NullHandling",
+            "cwd": "${workspaceFolder}/Chapter05/PeopleApp",
             "OS-COMMENT5": "For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console",
             "console": "internalConsole",
-            "stopAtEntry": false
+            "stopAtEntry": false,
+            "requireExactSource": false
         },
         {
             "name": ".NET Core Attach",
