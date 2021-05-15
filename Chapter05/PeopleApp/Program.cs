@@ -1,5 +1,6 @@
 ﻿using System;
 using Example.Shared;
+using ExampleLibrary;
 
 namespace PeopleApp
 {
@@ -7,17 +8,21 @@ namespace PeopleApp
     {
         static void Main(string[] args)
         {
+            // ------------------------ page 158 - default ------------------------
+            ThingOfDefaults defaultThing = new();
+            System.Console.WriteLine(defaultThing);
 
 
+
+            // ------------------------ page 157 - constructor ------------------------
             Person Olli = new();
             Person Sigi = new("Sigi", new DateTime(2018, 09, 07) );
-            System.Console.WriteLine(Olli.ToString());
-            System.Console.WriteLine(Sigi.ToString());
+            //System.Console.WriteLine(Sigi.ToString());
 
 
 
             // ------------------------ page 156 - const / read-only ------------------------
-            System.Console.WriteLine($"{Olli.Name} is a {Person.Species}");
+            //System.Console.WriteLine($"{Olli.Name} is a {Person.Species}");
 
 
 
@@ -27,7 +32,7 @@ namespace PeopleApp
             var lenasAccount = new BankAccount();
             lenasAccount.accountName = "Lenas Account";
             lenasAccount.Balance = 5500;
-            System.Console.WriteLine(format: "{0} earned {1:C} interest.", arg0: lenasAccount.accountName, arg1: lenasAccount.Balance * BankAccount.InterestRate);
+            //System.Console.WriteLine(format: "{0} earned {1:C} interest.", arg0: lenasAccount.accountName, arg1: lenasAccount.Balance * BankAccount.InterestRate);
 
 
 
