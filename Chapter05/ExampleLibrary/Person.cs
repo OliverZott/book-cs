@@ -53,6 +53,15 @@ namespace Example.Shared
         {
             return $"{Name} says hello to {name}.";
         }
+        public void PassingParameters(int a, ref int b, out int c)
+        {
+            c = 99;
+            a++;
+            b++;
+            c++;
+        }
+
+
 
     }
 }

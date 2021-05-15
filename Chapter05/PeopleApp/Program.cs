@@ -11,7 +11,18 @@ namespace PeopleApp
             Person Olli = new();
 
             // ------------------------ page 165 - method overloading ------------------------ 
-            System.Console.WriteLine(Olli.SayHello("Lena"));
+            int a = 10;
+            int b = 20;
+            int c = 30;
+            System.Console.WriteLine($"Before: a = {a}, b = {b}, c = {c}");
+            Olli.PassingParameters(a, ref b, out c);
+            System.Console.WriteLine($"After: a = {a}, b = {b}, c = {c}");
+
+
+
+
+            // ------------------------ page 165 - method overloading ------------------------ 
+            // System.Console.WriteLine(Olli.SayHello("Lena"));
 
 
             // ------------------------ page 162 - tuple / deconstruct tuple ------------------------
