@@ -22,12 +22,10 @@ namespace Example.Shared
         {
             this.DateOfBirth = dateOfBirth;
         }
-
         public Person(string name) : this()
         {
             this.Name = name;
         }
-
         public Person()
         {
             Name = "Unknown";
@@ -38,6 +36,22 @@ namespace Example.Shared
         public override string ToString()
         {
             return base.ToString() + ", Name: " + this.Name + ", instantiated at " + this.InstantiatedAt;
+        }
+        public (string, int) GetFruit()
+        {
+            return ("Apples", 5);
+        }
+        public (string Name, int Numbers) GetNamedFruit()
+        {
+            return (Name: "Bananaaaa", Numbers: 7);
+        }
+        public string SayHello()
+        {
+            return $"{Name} says Hello";
+        }
+        public string SayHello(string name)
+        {
+            return $"{Name} says hello to {name}.";
         }
 
     }

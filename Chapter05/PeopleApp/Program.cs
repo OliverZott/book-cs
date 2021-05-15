@@ -8,15 +8,34 @@ namespace PeopleApp
     {
         static void Main(string[] args)
         {
+            Person Olli = new();
+
+            // ------------------------ page 165 - method overloading ------------------------ 
+            System.Console.WriteLine(Olli.SayHello("Lena"));
+
+
+            // ------------------------ page 162 - tuple / deconstruct tuple ------------------------
+            (string, int) fruits = Olli.GetFruit();
+            /*
+            System.Console.WriteLine($"There are {fruits.Item2} {fruits.Item1} ");
+            // Deconstruct tuple
+            (string fruit, int amount) = Olli.GetFruit();
+            System.Console.WriteLine($"{fruit}, {amount}");
+
+            var fruitNamed = Olli.GetNamedFruit();
+            System.Console.WriteLine($"There are {fruitNamed.Numbers} {fruitNamed.Name}");
+            */
+
+
+
             // ------------------------ page 158 - default ------------------------
             ThingOfDefaults defaultThing = new();
-            System.Console.WriteLine(defaultThing);
+            //System.Console.WriteLine(defaultThing);
 
 
 
             // ------------------------ page 157 - constructor ------------------------
-            Person Olli = new();
-            Person Sigi = new("Sigi", new DateTime(2018, 09, 07) );
+            Person Sigi = new("Sigi", new DateTime(2018, 09, 07));
             //System.Console.WriteLine(Sigi.ToString());
 
 
