@@ -8,16 +8,25 @@ namespace PeopleApp
     {
         static void Main(string[] args)
         {
-            Person Olli = new();
+            Person Olli = new("Olli", new DateTime(1983, 12, 17));
 
             // ------------------------ page 165 - method overloading ------------------------ 
+            System.Console.WriteLine(Olli.Origin);
+            System.Console.WriteLine(Olli.Age);
+            Olli.FavoritPrimaryColor = "yello";
+            System.Console.WriteLine(Olli.FavoritPrimaryColor);
+
+
+
+            // ------------------------ page 165 - method overloading ------------------------ 
+            /*
             int a = 10;
             int b = 20;
             int c = 30;
             System.Console.WriteLine($"Before: a = {a}, b = {b}, c = {c}");
             Olli.PassingParameters(a, ref b, out c);
             System.Console.WriteLine($"After: a = {a}, b = {b}, c = {c}");
-
+            */
 
 
 
