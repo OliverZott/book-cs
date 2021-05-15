@@ -10,15 +10,28 @@ namespace PeopleApp
         {
             Person Olli = new("Olli", new DateTime(1983, 12, 17));
 
-            // ------------------------ page 165 - method overloading ------------------------ 
+            // ------------------------ page 172 - Properties and Indexers ------------------------ 
             System.Console.WriteLine(Olli.Origin);
             System.Console.WriteLine(Olli.Age);
-            Olli.FavoritPrimaryColor = "yello";
+            try
+            {
+                Olli.FavoritPrimaryColor = "yello";
+
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
             System.Console.WriteLine(Olli.FavoritPrimaryColor);
 
+            Olli.Children.Add(new Person("child1"));
+            Olli.Children.Add(new Person("child2"));
+            Olli.Children.Add(new Person("child3"));
+            System.Console.WriteLine(Olli.Children[4]);
 
 
-            // ------------------------ page 165 - method overloading ------------------------ 
+
+            // ------------------------ page 167 - parameter passing ------------------------ 
             /*
             int a = 10;
             int b = 20;
@@ -83,8 +96,8 @@ namespace PeopleApp
 
             Person Sigggi = new Person { Name = "Sigi", DateOfBirth = new DateTime(2019, 12, 24), favoriteWonder = (WondersOfTheAncientWorld).3 };
 
-            Lena.children.Add(new Person { Name = "child1" });
-            Lena.children.Add(new Person() { Name = "child2" });
+            Lena.Children.Add(new Person { Name = "child1" });
+            Lena.Children.Add(new Person() { Name = "child2" });
 
             /*
             Console.WriteLine(

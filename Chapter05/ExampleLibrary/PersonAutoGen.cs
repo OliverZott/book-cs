@@ -7,7 +7,7 @@ namespace Example.Shared
     {
         private string favoritPrimaryColor;
 
-        // Read-only properties (old C# 1-5 notation and modern lambda notation)
+        // Properties - readonly (old C# 1-5 notation and modern lambda notation)
         public string Origin
         {
             get
@@ -18,7 +18,7 @@ namespace Example.Shared
         public string Greeting => $"{Name} says 'Hello'.";
         public int Age => System.DateTime.Today.Year - DateOfBirth.Year;
 
-        // Seattable properties (without and with private property)
+        // Properties - seattable (without and with private property) 
         public string FavoriteIceCream { get; set; }
         public string FavoritPrimaryColor
         {
@@ -41,6 +41,15 @@ namespace Example.Shared
             }
         }
 
+
+        // Indexers
+        public Person this[int index]
+        {
+            get
+            {
+                return Children[index];
+            }
+        }
 
     }
 

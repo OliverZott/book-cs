@@ -15,7 +15,7 @@ namespace Example.Shared
         public DateTime DateOfBirth;
         public WondersOfTheAncientWorld favoriteWonder;
 
-        public List<Person> children = new();
+        public List<Person> Children = new();
 
 
         public Person(string name, DateTime dateOfBirth) : this(name)
