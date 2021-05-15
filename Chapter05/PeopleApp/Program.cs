@@ -11,7 +11,18 @@ namespace PeopleApp
         {
             Person Olli = new("Olli", new DateTime(1983, 12, 17));
 
+            // ------------------------ page 179 - Init ------------------------ 
+            var Lena = new ImmutablePerson
+            {
+                FirstName = "Magdalena",
+                LastName = "Bergmann"
+            };
+
+
+
+
             // ------------------------ page 176 - Pattern Matching ------------------------ 
+            /*
             object[] passengers = {
                 new FirstClassPassenger(){ AirMiles = 1_415},
                 new FirstClassPassenger{ AirMiles = 16_562},
@@ -40,7 +51,7 @@ namespace PeopleApp
 
                 System.Console.WriteLine($"Flight costs {fligthCost:C} for {passenger}");
             }
-
+            //*/
 
 
 
