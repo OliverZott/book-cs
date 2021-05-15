@@ -12,7 +12,7 @@ namespace PeopleApp
             Person Olli = new("Olli", new DateTime(1983, 12, 17));
 
             // ------------------------ page 179 - Init ------------------------ 
-            var Lena = new ImmutablePerson
+            var Lenchen = new ImmutablePerson
             {
                 FirstName = "Magdalena",
                 LastName = "Bergmann"
