@@ -1,5 +1,6 @@
 # C# 9 and .NET 5
 
+## Resources
 https://github.com/markjprice/cs9dotnet5
 
 https://static.packt-cdn.com/downloads/9781800568105_Appendices.pdf
@@ -7,6 +8,10 @@ https://static.packt-cdn.com/downloads/9781800568105_Appendices.pdf
 https://github.com/markjprice/cs9dotnet5-extras
 
 
+## Todo
+- Examples in book
+- Theoretical questions in book
+- Algorithm and Datastructure examples (book) 
 
 
 ----------------------------------------------------------------------
@@ -62,20 +67,42 @@ https://docs.microsoft.com/de-de/dotnet/core/introduction?source=docs
 - Overflow
 
 ## Remarks
-- **Pattern Matching**
+- **Pattern Matching** & **switch expressions**
+- 
 
 
 
 ----------------------------------------------------------------------
-# Chapter 4 -
+# Chapter 4 - Functions
 
+## Content
+- Functional programming: *imperative* vs *declarative*
+- Debugging
+- Logging
+- Unit Testing
+
+## Remarks
+- **Trace Listener** level *debug* and *trace*
+- **xunit**
+  - Arrange, Act, Assert
+  - `dotnet new classlib`, `dotnet new xunit`, `dotnet build`
 
 
 
 ----------------------------------------------------------------------
-# Chapter 5 -
+# Chapter 5 - Oop
 
+## Content
+- class libraries
+- fields / methods
+- properties / indexers / enum
+- *Pattern Matching* with objects
+- **records**
 
+## Remarks
+- Access modifiers (p. 149)
+- **readonly** better then **const**
+- Use **Tuples**
 
 
 ----------------------------------------------------------------------
