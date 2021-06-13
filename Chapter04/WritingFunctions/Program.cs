@@ -40,7 +40,7 @@ namespace WritingFunctions
         /// Used to calculate factorial for positive integer values.
         /// </summary>
         /// <param name="input"></param>
-        /// <returns>Facotiral of the entered number</returns>
+        /// <returns>Factorial of the entered number</returns>
         static int Factorial(int input)
         {
             if (input < 1)
@@ -145,7 +145,7 @@ namespace WritingFunctions
 
             for (int i = 1; i < 18; i++)
             {
-                System.Console.WriteLine(FibFunctional(i));
+                System.Console.WriteLine($"{i}: {FibFunctional(i)}");
             }
 
 
