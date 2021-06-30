@@ -91,8 +91,8 @@ https://docs.microsoft.com/de-de/dotnet/core/introduction?source=docs
 
 ----------------------------------------------------------------------
 # Chapter 5 - Oop
-
-## Content
+(page 141)
+## Content 
 - class libraries
 - fields / methods
 - properties / indexers / enum
@@ -102,9 +102,10 @@ https://docs.microsoft.com/de-de/dotnet/core/introduction?source=docs
 ## Remarks
 - Access modifiers (p. 149)
 - **readonly** better then **const**
-- Use **Tuples**
+- **Tuples** ... why  ???
+- **Pattern mathing** ... what/how  ???
 
 
 ----------------------------------------------------------------------
-# Chapter 6 -
+# Chapter 6 - Interfaces & Classes
 
