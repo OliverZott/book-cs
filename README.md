@@ -8,6 +8,14 @@ https://static.packt-cdn.com/downloads/9781800568105_Appendices.pdf
 https://github.com/markjprice/cs9dotnet5-extras
 
 
+
+## VS Code workflow
+1. Create folder and subfolder
+1. `Save Workspace as` and select the folder
+1. `Ad folder to workspace` and select the subfolder
+1. Terminal: `dotnet new classlib`
+1. Terminal: `dotnet build` or `dotnet run`
+
 ## Todo
 - Examples in book
 - Theoretical questions in book
@@ -95,8 +103,15 @@ https://docs.microsoft.com/de-de/dotnet/core/introduction?source=docs
 ## Content 
 - class libraries
 - fields / methods
-- properties / indexers / enum
-- *Pattern Matching* with objects
+- **partial** 
+  - page 168  
+  - `Chapter05\ExampleLibrary\PersonAutoGen.cs`
+- **properties** / **indexers** / **enum**
+  - page 171 / 172 / 151
+  - `Chapter05\ExampleLibrary\PersonAutoGen.cs`
+  - `Chapter05\ExampleLibrary\WondersOfTheAncientWorld.cs`
+- **Pattern Matching** with objects
+  - 
 - **records**
 
 ## Remarks

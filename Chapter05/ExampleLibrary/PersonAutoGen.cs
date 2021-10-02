@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace Example.Shared
 {
+
+    // Example for "partial" (page 169)
     public partial class Person
     {
         private string favoritPrimaryColor;

@@ -11,7 +11,6 @@ namespace PeopleApp
         {
             Person Olli = new("Olli", new DateTime(1983, 12, 17));
 
-
             // ------------------------ page 180 - Record short version ------------------------ 
             var kosto = new ImmutableAnimal("Kosto", "Cat");
             var (name, species) = kosto;
@@ -19,9 +18,7 @@ namespace PeopleApp
 
 
 
-
             // ------------------------ page 179 - Init / Records ------------------------ 
-            /*
             var Lenchen = new ImmutablePerson
             {
                 FirstName = "Magdalena",
@@ -36,14 +33,10 @@ namespace PeopleApp
             };
 
             var repaintedCar = car with { Color = "Black" };
-            //repaintedCar.Color = "Green";
+            // repaintedCar.Color = "Green";
 
             System.Console.WriteLine($"Original color was {car.Color}, repainted color is {repaintedCar.Color}.");
-            */
-
-
-
-
+            
 
 
             // ------------------------ page 176 - Pattern Matching ------------------------ 
