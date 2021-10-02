@@ -134,3 +134,21 @@ https://docs.microsoft.com/de-de/dotnet/core/introduction?source=docs
   - `Poke` and `Harry_Shout(`
 
 ## Remarks
+
+
+
+
+
+----------------------------------------------------------------------
+# Chapter 10 - Cryptography
+(page 333)
+
+## Content
+- Encryption / Decryption
+  - symetric / asymetric keys
+  - initialization vector (IV)
+  - salts
+  - *memory stream* and *crypto stream* usage.
+- Hashing
+  - page 341
+  - 
