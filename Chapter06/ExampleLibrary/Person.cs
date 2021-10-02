@@ -11,6 +11,23 @@ namespace ExampleLibrary
         public DateTime DateOfBirth;
         public List<Person> Children = new();
 
+        public event EventHandler Shout;
+        public int AngerLevel;
+
+        // Event example
+        public void Poke()
+        {
+            AngerLevel++;
+            if (AngerLevel >= 3)
+            {
+                // Raise shout event  only if at least one event delegate pointing at a method.
+                Shout?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+
+
+
         public void WriteToConsole()
         {
             System.Console.WriteLine($"{Name} was born in {DateOfBirth}.");
@@ -31,7 +48,23 @@ namespace ExampleLibrary
 
         public static Person operator *(Person p1, Person p2)
         {
-            return Procreate(p1, p1);
+            return Person.Procreate(p1, p1);
+        }
+
+        public static int Factorial(int number)
+        {
+            if (number < 0)
+            {
+                throw new ArgumentException($"{nameof(number)} cannot be less zero.");
+            }
+
+            return localFactorial(number);
+
+            int localFactorial(int localNumber)
+            {
+                if (localNumber < 1) return 1;
+                return localNumber * localFactorial(localNumber - 1);
+            }
         }
     }
 }

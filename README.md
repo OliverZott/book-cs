@@ -123,4 +123,14 @@ https://docs.microsoft.com/de-de/dotnet/core/introduction?source=docs
 
 ----------------------------------------------------------------------
 # Chapter 6 - Interfaces & Classes
+(page 183)
 
+## Content
+- Methods / operator overloading / local functions
+  - page 186 - 189
+  - `Factorial`
+- Events / Delegates
+  - page 190
+  - `Poke` and `Harry_Shout(`
+
+## Remarks
