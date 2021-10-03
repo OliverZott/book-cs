@@ -151,4 +151,35 @@ https://docs.microsoft.com/de-de/dotnet/core/introduction?source=docs
   - *memory stream* and *crypto stream* usage.
 - Hashing
   - page 341
-  - 
+  - `HashingApp.cs`
+- Signing
+  - page 346
+  - `SigningApp.cs`
+
+
+
+----------------------------------------------------------------------
+# Chapter 11 - Entity Framework Core
+
+- SQLite Tools
+- SQLiteStudio
+- EF Core
+
+## Setup
+
+### Setup SQLite
+- Install `sqlite-tools-win32-x86` from `https://www.sqlite.org`
+- Move sqlite3 executables to `c:\sqlite`
+- Set environment variables, select `Path` and edit/add c:\sqlite
+- Copy `Northwind.sql` from book-repository to project
+- Execute sql script: `sqlite3 Northwind.db -init Northwind.sql`
+- Install **SQLiteStudio** and connect to the `Northwind.db` database in the project.
+
+### Setup EF Core
+- Install EF Core **Commandline Tool**
+  - `dotnet tool list --global`
+  - Uninstall old ef version: `dotnet tool uninstall --global dotnet-ef`
+  - Install new version: `dotnet tool install --global dotnet-ef`
+- Install EF Core **Nuget**
+  -  
+### Connect to database

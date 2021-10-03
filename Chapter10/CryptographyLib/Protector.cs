@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -9,6 +10,48 @@ namespace CryptographyLib
     {
         private static readonly byte[] salt = Encoding.Unicode.GetBytes("7BANANAS");  // Salt size ,ust be at least 8 bytes, we will use 16.
         private static readonly int iterations = 2000;  // Iterations must be at least 1000
+        private static Dictionary<string, User> Users = new Dictionary<string, User>();
+
+
+        public static User Register(string userName, string password)
+        {
+            // generate random salt and convert to string
+            var rng = RandomNumberGenerator.Create();
+            var saltBytes = new byte[16];
+            rng.GetBytes(saltBytes);
+            var saltText = Convert.ToBase64String(saltBytes);
+
+            // generate the salted and hashed pasword
+            var saltedHashedPassword = SaltAndHashPassword(password, saltText);
+
+            var user = new User
+            {
+                Name = userName,
+                Salt = saltText,
+                SaltedHashedPassword = saltedHashedPassword
+            };
+
+            Users.Add(user.Name, user);
+            return user;
+        }
+
+
+        private static string SaltAndHashPassword(string password, string saltText)
+        {
+            var sha = SHA256.Create();
+            var saltedPassword = password + salt;
+            return Convert.ToBase64String(sha.ComputeHash(Encoding.Unicode.GetBytes(saltedPassword)));
+        }
+
+
+        public static bool CheckPassword(string username, string password)
+        {
+            if (!Users.ContainsKey(username)) return false;
+            var user = Users[username];
+            var saltedHashedPassword = SaltAndHashPassword(password, user.Salt);
+
+            return saltedHashedPassword == user.SaltedHashedPassword;
+        }
 
 
         public static string Encrypt(string plainText, string password)
