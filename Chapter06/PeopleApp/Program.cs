@@ -1,5 +1,6 @@
 ﻿using System;
 using ExampleLibrary;
+using static System.Console;
 
 namespace PeopleApp
 {
@@ -9,19 +10,43 @@ namespace PeopleApp
 
 
         // --------------- Event Examples ---------------
-        private static void Harry_Shout(object sender, EventArgs e)
-        {
-            Person p = (Person)sender;
-            System.Console.WriteLine($"{p.Name} is angry level {p.AngerLevel}");
-        }
-        private static void Harry_Shout2(object sender, EventArgs e)
-        {
-            System.Console.WriteLine($"Blub");
-        }
+        // private static void Harry_Shout(object sender, EventArgs e)
+        // {
+        //     Person p = (Person)sender;
+        //     System.Console.WriteLine($"{p.Name} is angry level {p.AngerLevel}");
+        // }
+        // private static void Harry_Shout2(object sender, EventArgs e)
+        // {
+        //     System.Console.WriteLine($"Blub");
+        // }
 
 
         static void Main()
         {
+
+            // --------------- Interfaces Examples ---------------
+            Person[] people =
+            {
+                new Person{ Name = "Olli"},
+                new Person{ Name = "Lena"},
+                new Person{ Name = "Zwu"},
+                new Person{ Name = "Sigi"}
+            };
+
+            Array.Sort(people);
+            foreach (var person in people)
+            {
+                WriteLine(person.Name);
+            }
+
+            Array.Sort(people, new PersonComparer());
+            foreach (var person in people)
+            {
+                WriteLine(person.Name);
+            }
+
+
+            // --------------- Event Examples ---------------
             //     var harry = new Person { Name = "Harry" };
             //     harry.Shout += Harry_Shout;
             //     harry.Shout += Harry_Shout2;

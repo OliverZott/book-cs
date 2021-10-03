@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ExampleLibrary
 {
-    public class Person
+    public class Person : IComparable<Person>
     {
         public string Name;
         public DateTime DateOfBirth;
@@ -14,7 +14,17 @@ namespace ExampleLibrary
         public event EventHandler Shout;
         public int AngerLevel;
 
-        // Event example
+
+
+        // --------------- Interfaces Examples ---------------
+        public int CompareTo(Person person)
+        {
+            return Name.CompareTo(person.Name);
+        }
+
+
+
+        // --------------- Event Examples ---------------
         public void Poke()
         {
             AngerLevel++;
@@ -24,8 +34,6 @@ namespace ExampleLibrary
                 Shout?.Invoke(this, EventArgs.Empty);
             }
         }
-
-
 
 
         public void WriteToConsole()
