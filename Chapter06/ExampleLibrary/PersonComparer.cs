@@ -10,7 +10,7 @@ namespace ExampleLibrary
 
             if (lengthCompareResult == 0)
             {
-                return x.Name.CompareTo(y.Name);
+                return x.Name.CompareTo(y.Name);  // standard string-compare method.
             }
             else
             {

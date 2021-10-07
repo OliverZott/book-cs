@@ -23,27 +23,48 @@ namespace PeopleApp
 
         static void Main()
         {
+            // --------------- Generics Examples ---------------
+            var t1 = new Thing();
+            t1.Data = 42;
+            System.Console.WriteLine(t1.Process(42));
+
+            var t2 = new Thing();
+            t2.Data = "blub";
+            System.Console.WriteLine(t1.Process("blub"));
+
+            var gt1 = new GenericThing<int>();
+            gt1.Data = 42;
+            System.Console.WriteLine(gt1.Process(42));
+
+            var gt2 = new GenericThing<string>();
+            gt2.Data = "blub";
+            System.Console.WriteLine(gt2.Process("blub"));
+
+            byte number = (byte)3;
+            System.Console.WriteLine(Squarer.Square(number));
+
+
 
             // --------------- Interfaces Examples ---------------
-            Person[] people =
-            {
-                new Person{ Name = "Olli"},
-                new Person{ Name = "Lena"},
-                new Person{ Name = "Zwu"},
-                new Person{ Name = "Sigi"}
-            };
+            // Person[] people =
+            // {
+            //     new Person{ Name = "Olli"},
+            //     new Person{ Name = "Lena"},
+            //     new Person{ Name = "Zwu"},
+            //     new Person{ Name = "Sigi"}
+            // };
 
-            Array.Sort(people);
-            foreach (var person in people)
-            {
-                WriteLine(person.Name);
-            }
+            // Array.Sort(people);
+            // foreach (var person in people)
+            // {
+            //     WriteLine(person.Name);
+            // }
 
-            Array.Sort(people, new PersonComparer());
-            foreach (var person in people)
-            {
-                WriteLine(person.Name);
-            }
+            // Array.Sort(people, new PersonComparer());
+            // foreach (var person in people)
+            // {
+            //     WriteLine(person.Name);
+            // }
 
 
             // --------------- Event Examples ---------------
