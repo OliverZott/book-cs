@@ -60,7 +60,7 @@ namespace CryptographyLib
             byte[] plainBytes = Encoding.Unicode.GetBytes(plainText);
 
             var aes = Aes.Create();  // abstract class factory method
-            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, iterations);
+            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, iterations);  // pasword-based key derivation function
 
             aes.Key = pbkdf2.GetBytes(32);  // set a 256-bit key
             aes.IV = pbkdf2.GetBytes(16);  // set a 128 bit IV

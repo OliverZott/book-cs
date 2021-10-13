@@ -183,3 +183,7 @@ https://docs.microsoft.com/de-de/dotnet/core/introduction?source=docs
 - Install EF Core **Nuget**
   -  
 ### Connect to database
+
+
+### Scaffolding db
+- `dotnet ef dbcontext scaffold "Filename=Northwind.db" Microsoft.EntityFrameworkCore.Sqlite --table Categories --table Products --output-dir AutoGenModels --namespace WorkingWithEEFCore.AutoGen --data-annotations --context Northwind`

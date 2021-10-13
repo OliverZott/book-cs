@@ -15,11 +15,13 @@ namespace WorkingWithEEFCore
             optionsBuilder.UseSqlite($"Filename={path}");
         }
 
-        protected override OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             // Example of using Fluent Api instead of attributes
             // to limit the Length of a category name to 15.
-            modelBuilder.Entity<Categor>()
+            modelBuilder.Entity<Category>()
                 .Property(category => category.CategoryName)
                 .IsRequired()  // Not Null
                 .HasMaxLength(15);

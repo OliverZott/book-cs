@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 
+
+
+
 namespace WorkingWithEEFCore
 {
     public class Category
@@ -25,9 +28,5 @@ namespace WorkingWithEEFCore
             // initiaize the navigation property to an empty collection.
             this.Products = new HashSet<Product>();
         }
-
-
-
-
     }
 }
