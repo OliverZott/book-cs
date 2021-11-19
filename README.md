@@ -15,6 +15,8 @@ https://github.com/markjprice/cs9dotnet5-extras
 1. `Ad folder to workspace` and select the subfolder
 1. Terminal: `dotnet new classlib`
 1. Terminal: `dotnet build` or `dotnet run`
+---
+- Change to project: `Strg+Shift+P` -->`OminSharp: SelectProject`
 
 ## Todo
 - Examples in book
